@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Balivia.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://return_to_game.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 129
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 138
+font_data = ExtResource( 1 )
+
+[node name="NewGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 699.0
+margin_top = 374.0
+margin_right = 1221.0
+margin_bottom = 705.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 522.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 1 )
+text = "New GAme"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 159.0
+margin_right = 522.0
+margin_bottom = 331.0
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

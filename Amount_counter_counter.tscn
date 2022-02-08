@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Amount_counter_counter.gd" type="Script" id=1]
+
+[node name="Amount_counter_counter" type="Control"]
+margin_left = 63.0
+margin_top = 17.0
+margin_right = 103.0
+margin_bottom = 57.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 22.0
+margin_right = 62.0
+margin_bottom = 36.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

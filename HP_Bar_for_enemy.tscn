@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Red_bar.png" type="Texture" id=1]
+[ext_resource path="res://HP_Bar_for_enemy.gd" type="Script" id=2]
+
+[node name="HP_Bar_for_enemy" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -990, -170 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 177.0
+margin_top = -2.0
+margin_right = 1333.0
+margin_bottom = 14.0
+value = 100.0
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReferenceRect" type="ReferenceRect" parent="HealthBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+border_color = Color( 0, 0, 0, 1 )
+border_width = 6.7
+__meta__ = {
+"_edit_use_anchors_": false
+}
